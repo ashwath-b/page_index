@@ -1,0 +1,55 @@
+RESTful API to index a page's content (h1, h2, h3 headers). The app is open service, i.e No signup/login.
+
+App has two endpoints.
+
+1. Receives an url and indexes the content.
+2. Lists stored urls.
+3. Details of a particular link.
+4. Update an url and it's index.
+5. Deletes an url and it's details.
+
+
+API Request:
+
+  To index an given URL/Link:
+    url: http://domain.com/page_details
+    method: POST
+
+  To list stored url:
+    url: http://domain.com/page_details
+    method: GET
+
+  To show details of a particular URL:
+    url: http://domain.com/page_details/:id
+    method: GET
+
+  To update an URL and it's details:
+    url: http://domain.com/page_details/:id
+    method: PATCH
+
+  To delete an URL and it's content:
+    url: http://domain.com/page_details/:id
+    method: DELETE
+
+
+To test on console:
+
+  To index an given URL/Link:
+    `curl -X POST --data "url=http://www.nokogiri.org/tutorials/installing_nokogiri.html" http://domain.com/page_details`
+    Ex: curl -X POST --data "url=http://www.nokogiri.org/tutorials/installing_nokogiri.html" http://localhost:3000/page_details
+
+  To list stored url:
+    `curl -X GET http://domain.com/page_details`
+    Ex: curl -X GET http://localhost:3000/page_details
+
+  To show details of a particular URL:
+    url: `curl -X GET http://domain.com/page_details/:id`
+    Ex: curl -X GET http://localhost:3000/page_details/1
+
+  To update an URL and it's details:
+    url: `curl -X PATCH --data "url=http://updated-url.com" http://domain.com/page_details/:id`
+    Ex: curl -X PATCH --data "url=http://updated-url.com" http://localhost:3000/page_details/1
+
+  To delete an URL and it's content:
+    url: `curl -X DELETE http://domain.com/page_details/:id`
+    Ex: curl -X DELETE http://localhost:3000/page_details/1

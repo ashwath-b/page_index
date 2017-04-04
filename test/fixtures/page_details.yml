@@ -1,0 +1,10 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  h1_tags: []
+  h2_tags: []
+  h3_tags: []
+  url: http://localhost:3000/temp_2.html
+
+# two:
+#   url: http://example2.com
